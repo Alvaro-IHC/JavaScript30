@@ -9,10 +9,10 @@
 
   <div class="controls">
     <label for="spacing">Spacing:</label>
-    <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+    <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-size="px">
 
     <label for="blur">Blur:</label>
-    <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
+    <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-size="px">
 
     <label for="base">Base Color</label>
     <input id="base" type="color" name="base" value="#ffc600">
@@ -67,7 +67,7 @@
       //console.log(input);
       input.addEventListener('change', () => {
         //console.log(this);
-        const units = input.dataset.sizing || '';
+        const units = input.dataset.size || '';
         console.log(document.documentElement.style.setProperty(`--${input.name}`, input.value + units));
       });
     });
